@@ -1,7 +1,7 @@
-diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
---- libnet-1.0606.old/Configure	Wed Nov  5 04:27:54 1997
-+++ libnet-1.0606/Configure	Thu Jun 24 09:17:33 1999
-@@ -249,8 +249,7 @@
+diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
+--- libnet-1.0703.orig/Configure	Mon Jan 17 17:44:18 2000
++++ libnet-1.0703/Configure	Wed Aug  2 20:51:54 2000
+@@ -312,8 +312,7 @@
  
  $msg = 'Enter a list of available NNTP hosts :';
  
@@ -11,7 +11,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'nntp_hosts'} = get_host_list($msg,$def);
  
-@@ -258,8 +257,7 @@
+@@ -321,8 +320,7 @@
  
  $msg = 'Enter a list of available SMTP hosts :';
  
@@ -21,7 +21,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'smtp_hosts'} = get_host_list($msg,$def);
  
-@@ -267,7 +265,7 @@
+@@ -330,7 +328,7 @@
  
  $msg = 'Enter a list of available POP3 hosts :';
  
@@ -30,7 +30,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'pop3_hosts'} = get_host_list($msg,$def);
  
-@@ -275,7 +273,7 @@
+@@ -338,7 +336,7 @@
  
  $msg = 'Enter a list of available SNPP hosts :';
  
@@ -39,7 +39,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'snpp_hosts'} = get_host_list($msg,$def);
  
-@@ -283,8 +281,7 @@
+@@ -346,8 +344,7 @@
  
  $msg = 'Enter a list of available PH Hosts   :'  ;
  
@@ -49,7 +49,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'ph_hosts'}   =  get_host_list($msg,$def);
  
-@@ -292,7 +289,7 @@
+@@ -355,7 +352,7 @@
  
  $msg = 'Enter a list of available TIME Hosts   :'  ;
  
@@ -58,7 +58,7 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'time_hosts'} = get_host_list($msg,$def);
  
-@@ -300,7 +297,7 @@
+@@ -363,7 +360,7 @@
  
  $msg = 'Enter a list of available DAYTIME Hosts   :'  ;
  
@@ -67,14 +67,12 @@ diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
  
  $cfg{'daytime_hosts'} = get_host_list($msg,$def);
  
-@@ -318,7 +315,7 @@
- FTP proxy hostname :
- EDQ
+@@ -427,7 +424,7 @@
+  $def = exists $oldcfg{'ftp_firewall_type'}  ? $oldcfg{'ftp_firewall_type'} : 1;
+  $ans = Prompt($msg,$def);
+  $cfg{'ftp_firewall_type'} = 0+$ans;
+- $def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
++ $def = [];
  
--$def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
-+$def = [];
- 
- $cfg{'ftp_firewall'} = get_hostname($msg,$def);
- 
-Only in libnet-1.0606: Makefile
-Only in libnet-1.0606: blib
+  $cfg{'ftp_firewall'} = get_hostname("FTP proxy hostname :", $def);
+ }
