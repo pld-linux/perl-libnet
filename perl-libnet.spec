@@ -2,10 +2,11 @@ Summary:     Miscellaneous perl networking modules
 Summary(pl): Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:        libnet
 Version:     1.0605
-Release:     1
-Source:      ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/%{name}-%{version}.tar.gz
+Release:     2
+Group:       Development/Languages/Perl
+Group(pl):   Programowanie/Jêzyki/Perl
 Copyright:   GPL
-Group:       Development/Libraries/Perl
+Source:      ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/%{name}-%{version}.tar.gz
 URL:         http://www.perl.com/CPAN//modules/by-module/Net/libnet-1.0502.readme
 Requires:    perl >= 5.002
 Buildroot:   /tmp/%{name}-%{version}-root
@@ -31,7 +32,7 @@ Protocol
 %description -l pl
 libnet jest zestawem modu³ów do perla, które udostêpniaj± prosty i spójny 
 interfejs programisty (API) do obs³ugi po stronie klienta ró¿nych protoko³ów
-u¿uwanych w sieci internet.
+u¿uwanych w sieci Internet.
 Spis dokumentów RFS, które s± zaimplementowane w libnet:
 
 Net::FTP        RFC959          File Transfer Protocol
@@ -42,7 +43,7 @@ Net::NNTP       RFC977          Network News Transfer Protocol
 Net::POP3       RFC1939         Post Office Protocol 3
 Net::SNPP       RFC1861         Simple Network Pager Protocol
 
-Dystrybucja libnet zawieraz tak¿e modu³ (Net::PH) który umo¿liwia
+Dystrybucja libnet zawiera tak¿e modu³ (Net::PH), który umo¿liwia
 komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
 
 %prep
@@ -59,14 +60,18 @@ make install \
 	MKPATH="install -d" \
 	PREFIX=$RPM_BUILD_ROOT/usr \
 	INSTALLMAN3DIR=$RPM_BUILD_ROOT/usr/man/man3
+
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man3/*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %dir /usr/lib/perl5/site_perl/*/*/Net
-/usr/lib/perl5/site_perl/*/*/Net/Cmd.pm
 %config(noreplace) /usr/lib/perl5/site_perl/*/*/Net/Config.pm
+
+/usr/lib/perl5/site_perl/*/*/Net/Cmd.pm
 /usr/lib/perl5/site_perl/*/*/Net/Domain.pm
 /usr/lib/perl5/site_perl/*/*/Net/DummyInetd.pm
 /usr/lib/perl5/site_perl/*/*/Net/FTP
@@ -79,9 +84,16 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/perl5/site_perl/*/*/Net/SNPP.pm
 /usr/lib/perl5/site_perl/*/*/Net/Time.pm
 /usr/lib/perl5/site_perl/*/*/auto/Net
-%attr(644, root,  man) /usr/man/man3/*
+/usr/man/man3/*
 
 %changelog 
+* Sun Mar 14 1999 Micha³ Kuratczyk <kura@pld.org.pl>
+  [1.0605-2]
+- changed Group to Development/Languages/Perl
+- added Group(pl)
+- removed man group from man pages
+- added gzipping man pages
+
 * Wed Nov 13 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.0605-1]
 - rewrited for using Buildroot,
