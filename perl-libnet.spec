@@ -3,15 +3,16 @@ Summary:	Miscellaneous perl networking modules
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		perl-libnet
 Version:	1.0703
-Release:	1
+Release:	2
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 License:	GPL
 URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
 Source0:	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,20 +59,13 @@ komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
 %build
 yes "" | perl Makefile.PL 
 
-%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+%{__make} OPTIMIZE="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_archlib}
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
 
-sed -e "s#$RPM_BUILD_ROOT##g" $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist \
-	>$RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk
-mv -f $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk \
-	$RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -79,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %config(noreplace) %{perl_sitelib}/Net/Config.pm
-
 %{perl_sitelib}/Net/Cmd.pm
 %{perl_sitelib}/Net/Domain.pm
 %{perl_sitelib}/Net/DummyInetd.pm
@@ -92,5 +85,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/Net/SMTP.pm
 %{perl_sitelib}/Net/SNPP.pm
 %{perl_sitelib}/Net/Time.pm
-%{perl_sitearch}/auto/Net/.packlist
 %{_mandir}/man3/*
