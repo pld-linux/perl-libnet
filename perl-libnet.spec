@@ -57,7 +57,7 @@ distribution are:
 - Net::SNPP - RFC1861 Simple Network Pager Protocol
 
 %description -l pl
-libnet jest zestawem modu³ów do perla, które udostêpniaj± prosty i
+libnet jest zestawem modu³ów do Perla, które udostêpniaj± prosty i
 spójny interfejs programisty (API) do obs³ugi po stronie klienta
 ró¿nych protoko³ów u¿ywanych w sieci Internet. Spis dokumentów RFC,
 które s± zaimplementowane w libnet:
