@@ -78,19 +78,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%config(noreplace) %{perl_sitearch}/Net/Config.pm
+%config(noreplace) %{perl_sitelib}/Net/Config.pm
 
-%{perl_sitearch}/Net/Cmd.pm
-%{perl_sitearch}/Net/Domain.pm
-%{perl_sitearch}/Net/DummyInetd.pm
-%{perl_sitearch}/Net/FTP
-%{perl_sitearch}/Net/FTP.pm
-%{perl_sitearch}/Net/NNTP.pm
-%{perl_sitearch}/Net/Netrc.pm
-%{perl_sitearch}/Net/PH.pm
-%{perl_sitearch}/Net/POP3.pm
-%{perl_sitearch}/Net/SMTP.pm
-%{perl_sitearch}/Net/SNPP.pm
-%{perl_sitearch}/Net/Time.pm
+%{perl_sitelib}/Net/Cmd.pm
+%{perl_sitelib}/Net/Domain.pm
+%{perl_sitelib}/Net/DummyInetd.pm
+%{perl_sitelib}/Net/FTP
+%{perl_sitelib}/Net/FTP.pm
+%{perl_sitelib}/Net/NNTP.pm
+%{perl_sitelib}/Net/Netrc.pm
+%{perl_sitelib}/Net/PH.pm
+%{perl_sitelib}/Net/POP3.pm
+%{perl_sitelib}/Net/SMTP.pm
+%{perl_sitelib}/Net/SNPP.pm
+%{perl_sitelib}/Net/Time.pm
 %{perl_sitearch}/auto/Net/.packlist
 %{_mandir}/man3/*
