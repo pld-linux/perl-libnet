@@ -5,8 +5,14 @@ Name:		perl-libnet
 Version:	1.0703
 Release:	4
 Group:		Development/Languages/Perl
+Group(cs):	Vıvojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
+Group(es):	Desarrollo/Lenguajes/Perl
+Group(fr):	Development/Langues/Perl
+Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
+Group(pt):	Desenvolvimento/Linguagens/Perl
+Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
 License:	GPL
 URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
