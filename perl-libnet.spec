@@ -73,7 +73,7 @@ które s± zaimplementowane w libnet:
 %patch -p1
 
 %build
-perl Makefile.PL </dev/null
+%{__perl} Makefile.PL </dev/null
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
