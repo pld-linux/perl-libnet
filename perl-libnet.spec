@@ -6,7 +6,7 @@ Version:	1.0901
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
 BuildRequires:	rpm-perlprov >= 3.0.3-16
