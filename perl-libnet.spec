@@ -29,6 +29,7 @@ Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+# Source0-md5: 9f0edd8e7270cf98deddae3451430ca4
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	perl-devel >= 5.6
