@@ -23,13 +23,13 @@ Summary(sv):	libnet Perlmodul
 Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libnet
 Summary(zh_CN):	libnet Perl Ä£¿é
 Name:		perl-libnet
-Version:	1.13
+Version:	1.16
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5: 9f0edd8e7270cf98deddae3451430ca4
+# Source0-md5:	79dbf57a7bcc0cef70209f714dd2cb4c
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	perl-devel >= 5.6
@@ -77,7 +77,8 @@ które s± zaimplementowane w libnet:
 %{__perl} Makefile.PL </dev/null \
 	INSTALLDIRS=vendor 
 
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
 
@@ -85,7 +86,8 @@ które s± zaimplementowane w libnet:
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_archlib}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
