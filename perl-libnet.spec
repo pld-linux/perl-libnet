@@ -1,14 +1,15 @@
 Summary:	Miscellaneous perl networking modules
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		libnet
-Version:	1.0605
-Release:	2
+Version:	1.0606
+Release:	1
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Copyright:	GPL
-URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-1.0502.readme
+URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
 Source:		ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/%{name}-%{version}.tar.gz
-Requires:	perl >= 5.002
+BuildPreReq:	perl >= 5.002
+%requires_eq	perl
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -58,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 # install -d $RPM_BUILD_ROOT/usr/{lib/perl5/site_perl/Net,man/man3}
 make install \
 	MKPATH="install -d" \
-	PREFIX=$RPM_BUILD_ROOT/usr \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
 	INSTALLMAN3DIR=$RPM_BUILD_ROOT%{_mandir}/man3
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
@@ -68,22 +69,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{_libdir}/perl5/site_perl/*/*/Net
-%config(noreplace) %{_libdir}/perl5/site_perl/*/*/Net/Config.pm
+%dir %{perl_sitearch}/Net
+%config(noreplace) %{perl_sitearch}/Net/Config.pm
 
-%{_libdir}/perl5/site_perl/*/*/Net/Cmd.pm
-%{_libdir}/perl5/site_perl/*/*/Net/Domain.pm
-%{_libdir}/perl5/site_perl/*/*/Net/DummyInetd.pm
-%{_libdir}/perl5/site_perl/*/*/Net/FTP
-%{_libdir}/perl5/site_perl/*/*/Net/FTP.pm
-%{_libdir}/perl5/site_perl/*/*/Net/NNTP.pm
-%{_libdir}/perl5/site_perl/*/*/Net/Netrc.pm
-%{_libdir}/perl5/site_perl/*/*/Net/PH.pm
-%{_libdir}/perl5/site_perl/*/*/Net/POP3.pm
-%{_libdir}/perl5/site_perl/*/*/Net/SMTP.pm
-%{_libdir}/perl5/site_perl/*/*/Net/SNPP.pm
-%{_libdir}/perl5/site_perl/*/*/Net/Time.pm
-%{_libdir}/perl5/site_perl/*/*/auto/Net
+%{perl_sitearch}/Net/Cmd.pm
+%{perl_sitearch}/Net/Domain.pm
+%{perl_sitearch}/Net/DummyInetd.pm
+%{perl_sitearch}/Net/FTP
+%{perl_sitearch}/Net/FTP.pm
+%{perl_sitearch}/Net/NNTP.pm
+%{perl_sitearch}/Net/Netrc.pm
+%{perl_sitearch}/Net/PH.pm
+%{perl_sitearch}/Net/POP3.pm
+%{perl_sitearch}/Net/SMTP.pm
+%{perl_sitearch}/Net/SNPP.pm
+%{perl_sitearch}/Net/Time.pm
+%{perl_sitearch}/auto/Net
 %{_mandir}/man3/*
 
 %changelog 
