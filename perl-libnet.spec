@@ -6,10 +6,10 @@ Version:	1.0606
 Release:	5
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Copyright:	GPL
+License:	GPL
 URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
-Source:		ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
-Patch:		perl-libnet-Configure.patch
+Source0:	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
+Patch0:		perl-libnet-Configure.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -17,36 +17,36 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-libnet is a collection of Perl modules which provides a simple
-and consistent programming interface (API) to the client side
-of various protocols used in the internet community.
-The RFCs implemented in this distribution are
+libnet is a collection of Perl modules which provides a simple and
+consistent programming interface (API) to the client side of various
+protocols used in the internet community. The RFCs implemented in this
+distribution are:
 
-Net::FTP        RFC959          File Transfer Protocol
-Net::SMTP       RFC821          Simple Mail Transfer Protocol
-Net::Time       RFC867          Daytime Protocol
-Net::Time       RFC868          Time Protocol
-Net::NNTP       RFC977          Network News Transfer Protocol
-Net::POP3       RFC1939         Post Office Protocol 3
-Net::SNPP       RFC1861         Simple Network Pager Protocol
+- Net::FTP  - RFC959 File Transfer Protocol
+- Net::SMTP - RFC821 Simple Mail Transfer Protocol
+- Net::Time - RFC867 Daytime Protocol
+- Net::Time - RFC868 Time Protocol
+- Net::NNTP - RFC977 Network News Transfer Protocol
+- Net::POP3 - RFC1939 Post Office Protocol 3
+- Net::SNPP - RFC1861 Simple Network Pager Protocol
 
 The distribution also contains a module (Net::PH) which facilitates
 comunicate with with servers using the CCSO Nameserver Server-Client
 Protocol
 
 %description -l pl
-libnet jest zestawem modu³ów do perla, które udostêpniaj± prosty i spójny 
-interfejs programisty (API) do obs³ugi po stronie klienta ró¿nych protoko³ów
-u¿uwanych w sieci Internet.
-Spis dokumentów RFS, które s± zaimplementowane w libnet:
+libnet jest zestawem modu³ów do perla, które udostêpniaj± prosty i
+spójny interfejs programisty (API) do obs³ugi po stronie klienta
+ró¿nych protoko³ów u¿uwanych w sieci Internet. Spis dokumentów RFS,
+które s± zaimplementowane w libnet:
 
-Net::FTP        RFC959          File Transfer Protocol
-Net::SMTP       RFC821          Simple Mail Transfer Protocol
-Net::Time       RFC867          Daytime Protocol
-Net::Time       RFC868          Time Protocol
-Net::NNTP       RFC977          Network News Transfer Protocol
-Net::POP3       RFC1939         Post Office Protocol 3
-Net::SNPP       RFC1861         Simple Network Pager Protocol
+- Net::FTP  - RFC959 File Transfer Protocol
+- Net::SMTP - RFC821 Simple Mail Transfer Protocol
+- Net::Time - RFC867 Daytime Protocol
+- Net::Time - RFC868 Time Protocol
+- Net::NNTP - RFC977 Network News Transfer Protocol
+- Net::POP3 - RFC1939 Post Office Protocol 3
+- Net::SNPP - RFC1861 Simple Network Pager Protocol
 
 Dystrybucja libnet zawiera tak¿e modu³ (Net::PH), który umo¿liwia
 komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
