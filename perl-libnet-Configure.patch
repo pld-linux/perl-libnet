@@ -1,0 +1,80 @@
+diff -ru libnet-1.0606.old/Configure libnet-1.0606/Configure
+--- libnet-1.0606.old/Configure	Wed Nov  5 04:27:54 1997
++++ libnet-1.0606/Configure	Thu Jun 24 09:17:33 1999
+@@ -249,8 +249,7 @@
+ 
+ $msg = 'Enter a list of available NNTP hosts :';
+ 
+-$def = $oldcfg{'nntp_hosts'} ||
+-	[ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
++$def = [];
+ 
+ $cfg{'nntp_hosts'} = get_host_list($msg,$def);
+ 
+@@ -258,8 +257,7 @@
+ 
+ $msg = 'Enter a list of available SMTP hosts :';
+ 
+-$def = $oldcfg{'smtp_hosts'} ||
+-	[ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
++$def = [];
+ 
+ $cfg{'smtp_hosts'} = get_host_list($msg,$def);
+ 
+@@ -267,7 +265,7 @@
+ 
+ $msg = 'Enter a list of available POP3 hosts :';
+ 
+-$def = $oldcfg{'pop3_hosts'} || [];
++$def = [];
+ 
+ $cfg{'pop3_hosts'} = get_host_list($msg,$def);
+ 
+@@ -275,7 +273,7 @@
+ 
+ $msg = 'Enter a list of available SNPP hosts :';
+ 
+-$def = $oldcfg{'snpp_hosts'} || [];
++$def = [];
+ 
+ $cfg{'snpp_hosts'} = get_host_list($msg,$def);
+ 
+@@ -283,8 +281,7 @@
+ 
+ $msg = 'Enter a list of available PH Hosts   :'  ;
+ 
+-$def = $oldcfg{'ph_hosts'} ||
+-	[ default_hostname('dirserv') ];
++$def = [];
+ 
+ $cfg{'ph_hosts'}   =  get_host_list($msg,$def);
+ 
+@@ -292,7 +289,7 @@
+ 
+ $msg = 'Enter a list of available TIME Hosts   :'  ;
+ 
+-$def = $oldcfg{'time_hosts'} || [];
++$def = [];
+ 
+ $cfg{'time_hosts'} = get_host_list($msg,$def);
+ 
+@@ -300,7 +297,7 @@
+ 
+ $msg = 'Enter a list of available DAYTIME Hosts   :'  ;
+ 
+-$def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
++$def = [];
+ 
+ $cfg{'daytime_hosts'} = get_host_list($msg,$def);
+ 
+@@ -318,7 +315,7 @@
+ FTP proxy hostname :
+ EDQ
+ 
+-$def = $oldcfg{'ftp_firewall'} || $ENV{FTP_FIREWALL};
++$def = [];
+ 
+ $cfg{'ftp_firewall'} = get_hostname($msg,$def);
+ 
+Only in libnet-1.0606: Makefile
+Only in libnet-1.0606: blib
