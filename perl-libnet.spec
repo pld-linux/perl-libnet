@@ -2,8 +2,8 @@
 Summary:	Miscellaneous perl networking modules
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		perl-libnet
-Version:	1.0703
-Release:	4
+Version:	1.0901
+Release:	1
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -80,14 +80,17 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{perl_sitelib}/Net/Config.pm
 %{perl_sitelib}/Net/Cmd.pm
 %{perl_sitelib}/Net/Domain.pm
-%{perl_sitelib}/Net/DummyInetd.pm
-%{perl_sitelib}/Net/FTP
+%{perl_sitelib}/Net/FTP/A.pm
+%{perl_sitelib}/Net/FTP/dataconn.pm
+%{perl_sitelib}/Net/FTP/E.pm
+%{perl_sitelib}/Net/FTP/I.pm
+%{perl_sitelib}/Net/FTP/L.pm
 %{perl_sitelib}/Net/FTP.pm
+%{perl_sitelib}/Net/libnet.cfg
+%{perl_sitelib}/Net/libnetFAQ.pod
 %{perl_sitelib}/Net/NNTP.pm
-%{perl_sitelib}/Net/Netrc.pm
-%{perl_sitelib}/Net/PH.pm
 %{perl_sitelib}/Net/POP3.pm
+%{perl_sitelib}/Net/Netrc.pm
 %{perl_sitelib}/Net/SMTP.pm
-%{perl_sitelib}/Net/SNPP.pm
 %{perl_sitelib}/Net/Time.pm
 %{_mandir}/man3/*
