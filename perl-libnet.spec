@@ -14,7 +14,7 @@ Summary(fr):	Module Perl libnet
 Summary(it):	Modulo di Perl libnet
 Summary(ja):	libnet Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	libnet ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul libnet
+Summary(nb):	Perlmodul libnet
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Summary(pt):	Módulo de Perl libnet
 Summary(pt_BR):	Módulo Perl libnet
