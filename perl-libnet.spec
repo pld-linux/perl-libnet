@@ -83,7 +83,6 @@ które s± zaimplementowane w libnet:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_archlib}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
