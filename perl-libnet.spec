@@ -24,7 +24,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libnet
 Summary(zh_CN):	libnet Perl Ä£¿é
 Name:		perl-libnet
 Version:	1.12
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -32,7 +32,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -73,7 +73,8 @@ które s± zaimplementowane w libnet:
 %patch -p1
 
 %build
-%{__perl} Makefile.PL </dev/null
+%{__perl} Makefile.PL </dev/null \
+	INSTALLDIRS=vendor 
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
@@ -91,21 +92,21 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
-%config(noreplace) %{perl_sitelib}/Net/Config.pm
-%{perl_sitelib}/Net/Cmd.pm
-%{perl_sitelib}/Net/Domain.pm
-%dir %{perl_sitelib}/Net/FTP
-%{perl_sitelib}/Net/FTP/A.pm
-%{perl_sitelib}/Net/FTP/dataconn.pm
-%{perl_sitelib}/Net/FTP/E.pm
-%{perl_sitelib}/Net/FTP/I.pm
-%{perl_sitelib}/Net/FTP/L.pm
-%{perl_sitelib}/Net/FTP.pm
-%{perl_sitelib}/Net/libnet.cfg
-%{perl_sitelib}/Net/libnetFAQ.pod
-%{perl_sitelib}/Net/NNTP.pm
-%{perl_sitelib}/Net/POP3.pm
-%{perl_sitelib}/Net/Netrc.pm
-%{perl_sitelib}/Net/SMTP.pm
-%{perl_sitelib}/Net/Time.pm
+%config(noreplace) %{perl_vendorlib}/Net/Config.pm
+%{perl_vendorlib}/Net/Cmd.pm
+%{perl_vendorlib}/Net/Domain.pm
+%dir %{perl_vendorlib}/Net/FTP
+%{perl_vendorlib}/Net/FTP/A.pm
+%{perl_vendorlib}/Net/FTP/dataconn.pm
+%{perl_vendorlib}/Net/FTP/E.pm
+%{perl_vendorlib}/Net/FTP/I.pm
+%{perl_vendorlib}/Net/FTP/L.pm
+%{perl_vendorlib}/Net/FTP.pm
+%{perl_vendorlib}/Net/libnet.cfg
+%{perl_vendorlib}/Net/libnetFAQ.pod
+%{perl_vendorlib}/Net/NNTP.pm
+%{perl_vendorlib}/Net/POP3.pm
+%{perl_vendorlib}/Net/Netrc.pm
+%{perl_vendorlib}/Net/SMTP.pm
+%{perl_vendorlib}/Net/Time.pm
 %{_mandir}/man3/*
