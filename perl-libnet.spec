@@ -94,36 +94,3 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/Net/Time.pm
 %{perl_sitearch}/auto/Net
 %{_mandir}/man3/*
-
-%changelog 
-* Sun Mar 14 1999 Micha³ Kuratczyk <kura@pld.org.pl>
-  [1.0605-2]
-- changed Group to Development/Languages/Perl
-- added Group(pl)
-- removed man group from man pages
-- added gzipping man pages
-
-* Wed Nov 13 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.0605-1]
-- rewrited for using Buildroot,
-- added -q %setup parameter,
-- added pl translation,
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- removed %post,
-- removed Packager field (this must be placed in private ~/.rpmrc),
-- man pages moved to /usr/mam/man3,
-- added %attr and %defattr macros in %files (allows build package from
-  non-root account).
-
-* Thu Mar 08 1998 Kirk Bauer <kirk@kaybee.org>
-For some reason, Config.pm ended up in a different place on my system.
-So, I made a new release.  I will probably be killed for this next one,
-but I took out the dependencies for IO and Data-Dumper... because
-it seems that LibNet works without them...
-
-* Thu Jul 17 1997 Toshio Kuratomi <badger@prtr-13.ucsc.edu>
-This distribution of libnet is the same as libnet rel1.  Someone created
-a libnet release 2 that did not have all the proper files.... If that
-person would care to talk to me about why they thought their subtractions
-from the package were necessary, I would be most pleased.
