@@ -77,8 +77,7 @@ które s± zaimplementowane w libnet:
 %build
 %{__perl} Makefile.PL </dev/null \
 	INSTALLDIRS=vendor
-%{__make} \
-	OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %{?with_tests:%{__make} test}
 
