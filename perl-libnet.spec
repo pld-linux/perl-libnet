@@ -9,7 +9,7 @@ Copyright:	GPL
 URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
 Source:		ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch:		perl-libnet-Configure.patch
-BuildRequires:	perl >= 5.002
+BuildRequires:	perl >= 5.005_61-0.1
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 Obsoletes:	libnet
@@ -55,15 +55,15 @@ komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
 %patch -p1
 
 %build
-yes "" | perl Makefile.PL
+yes "" | perl Makefile.PL 
+
 make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_archlib}
 make install \
-	MKPATH="install -d" \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	INSTALLMAN3DIR=$RPM_BUILD_ROOT%{_mandir}/man3
+	DESTDIR=$RPM_BUILD_ROOT
 
 sed -e "s#$RPM_BUILD_ROOT##g" $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist \
 	>$RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk
