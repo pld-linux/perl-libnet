@@ -10,8 +10,8 @@ Copyright:	GPL
 URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
 Source:		ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch:		perl-libnet-Configure.patch
-BuildRequires:	rpm-perlprov
-BuildRequires:	perl >= 5.005_03-12
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 Obsoletes:	libnet
