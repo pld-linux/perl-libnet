@@ -1,15 +1,15 @@
-Summary:     Miscellaneous perl networking modules
-Summary(pl): Ró¿ne modu³y perlowe do obs³ugi sieci
-Name:        libnet
-Version:     1.0605
-Release:     2
-Group:       Development/Languages/Perl
-Group(pl):   Programowanie/Jêzyki/Perl
-Copyright:   GPL
-Source:      ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/%{name}-%{version}.tar.gz
-URL:         http://www.perl.com/CPAN//modules/by-module/Net/libnet-1.0502.readme
-Requires:    perl >= 5.002
-Buildroot:   /tmp/%{name}-%{version}-root
+Summary:	Miscellaneous perl networking modules
+Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
+Name:		libnet
+Version:	1.0605
+Release:	2
+Group:		Development/Languages/Perl
+Group(pl):	Programowanie/Jêzyki/Perl
+Copyright:	GPL
+URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-1.0502.readme
+Source:		ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/%{name}-%{version}.tar.gz
+Requires:	perl >= 5.002
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 libnet is a collection of Perl modules which provides a simple
