@@ -4,6 +4,7 @@ Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		perl-libnet
 Version:	1.0901
 Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -13,14 +14,16 @@ Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
-License:	GPL
-URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
+URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# required only on os390
+%define		_noautoreq	'perl(Convert::EBCDIC)'
 
 %description
 libnet is a collection of Perl modules which provides a simple and
@@ -80,6 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{perl_sitelib}/Net/Config.pm
 %{perl_sitelib}/Net/Cmd.pm
 %{perl_sitelib}/Net/Domain.pm
+%dir %{perl_sitelib}/Net/FTP
 %{perl_sitelib}/Net/FTP/A.pm
 %{perl_sitelib}/Net/FTP/dataconn.pm
 %{perl_sitelib}/Net/FTP/E.pm
