@@ -9,7 +9,7 @@ Group(pl):	Programowanie/Jêzyki/Perl
 License:	GPL
 URL:		http://www.perl.com/CPAN//modules/by-module/Net/libnet-%{version}.readme
 Source0:	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
-Patch0:		perl-libnet-Configure.patch
+Patch0:		%{name}-Configure.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -22,7 +22,7 @@ consistent programming interface (API) to the client side of various
 protocols used in the internet community. The RFCs implemented in this
 distribution are:
 
-- Net::FTP  - RFC959 File Transfer Protocol
+- Net::FTP - RFC959 File Transfer Protocol
 - Net::SMTP - RFC821 Simple Mail Transfer Protocol
 - Net::Time - RFC867 Daytime Protocol
 - Net::Time - RFC868 Time Protocol
@@ -40,7 +40,7 @@ spójny interfejs programisty (API) do obs³ugi po stronie klienta
 ró¿nych protoko³ów u¿uwanych w sieci Internet. Spis dokumentów RFS,
 które s± zaimplementowane w libnet:
 
-- Net::FTP  - RFC959 File Transfer Protocol
+- Net::FTP - RFC959 File Transfer Protocol
 - Net::SMTP - RFC821 Simple Mail Transfer Protocol
 - Net::Time - RFC867 Daytime Protocol
 - Net::Time - RFC868 Time Protocol
@@ -68,7 +68,7 @@ install -d $RPM_BUILD_ROOT%{perl_archlib}
 
 sed -e "s#$RPM_BUILD_ROOT##g" $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist \
 	>$RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk
-mv $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk \
+mv -f $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist.wrk \
 	$RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
