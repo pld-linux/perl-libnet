@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl libnet
 Summary(zh_CN):	libnet Perl дё©И
 Name:		perl-libnet
 Version:	1.0901
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
