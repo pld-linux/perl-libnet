@@ -92,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 - removed %post,
 - removed Packager field (this must be placed in private ~/.rpmrc),
 - man pages moved to /usr/mam/man3,
-- added %attr and %defattr macros in %files (allow build package from
+- added %attr and %defattr macros in %files (allows build package from
   non-root account).
 
 * Thu Mar 08 1998 Kirk Bauer <kirk@kaybee.org>
