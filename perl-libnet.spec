@@ -59,9 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 make install \
 	MKPATH="install -d" \
 	PREFIX=$RPM_BUILD_ROOT/usr \
-	INSTALLMAN3DIR=$RPM_BUILD_ROOT/usr/man/man3
+	INSTALLMAN3DIR=$RPM_BUILD_ROOT%{_mandir}/man3
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man3/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -84,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/perl5/site_perl/*/*/Net/SNPP.pm
 /usr/lib/perl5/site_perl/*/*/Net/Time.pm
 /usr/lib/perl5/site_perl/*/*/auto/Net
-/usr/man/man3/*
+%{_mandir}/man3/*
 
 %changelog 
 * Sun Mar 14 1999 Micha³ Kuratczyk <kura@pld.org.pl>
