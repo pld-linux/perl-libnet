@@ -58,12 +58,12 @@ komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
 %build
 yes "" | perl Makefile.PL 
 
-make OPTIMIZE="$RPM_OPT_FLAGS"
+%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_archlib}
-make install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 sed -e "s#$RPM_BUILD_ROOT##g" $RPM_BUILD_ROOT%{perl_sitearch}/auto/Net/.packlist \
