@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl libnet
 Summary(zh_CN):	libnet Perl дё©И
 Name:		perl-libnet
 Version:	1.19
-Release:	1
+Release:	2
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
@@ -105,7 +105,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Net/FTP/L.pm
 %{perl_vendorlib}/Net/FTP.pm
 %{perl_vendorlib}/Net/libnet.cfg
-%{perl_vendorlib}/Net/libnetFAQ.pod
 %{perl_vendorlib}/Net/NNTP.pm
 %{perl_vendorlib}/Net/POP3.pm
 %{perl_vendorlib}/Net/Netrc.pm
