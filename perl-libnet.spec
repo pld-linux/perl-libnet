@@ -68,22 +68,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir /usr/lib/perl5/site_perl/*/*/Net
-%config(noreplace) /usr/lib/perl5/site_perl/*/*/Net/Config.pm
+%dir %{_libdir}/perl5/site_perl/*/*/Net
+%config(noreplace) %{_libdir}/perl5/site_perl/*/*/Net/Config.pm
 
-/usr/lib/perl5/site_perl/*/*/Net/Cmd.pm
-/usr/lib/perl5/site_perl/*/*/Net/Domain.pm
-/usr/lib/perl5/site_perl/*/*/Net/DummyInetd.pm
-/usr/lib/perl5/site_perl/*/*/Net/FTP
-/usr/lib/perl5/site_perl/*/*/Net/FTP.pm
-/usr/lib/perl5/site_perl/*/*/Net/NNTP.pm
-/usr/lib/perl5/site_perl/*/*/Net/Netrc.pm
-/usr/lib/perl5/site_perl/*/*/Net/PH.pm
-/usr/lib/perl5/site_perl/*/*/Net/POP3.pm
-/usr/lib/perl5/site_perl/*/*/Net/SMTP.pm
-/usr/lib/perl5/site_perl/*/*/Net/SNPP.pm
-/usr/lib/perl5/site_perl/*/*/Net/Time.pm
-/usr/lib/perl5/site_perl/*/*/auto/Net
+%{_libdir}/perl5/site_perl/*/*/Net/Cmd.pm
+%{_libdir}/perl5/site_perl/*/*/Net/Domain.pm
+%{_libdir}/perl5/site_perl/*/*/Net/DummyInetd.pm
+%{_libdir}/perl5/site_perl/*/*/Net/FTP
+%{_libdir}/perl5/site_perl/*/*/Net/FTP.pm
+%{_libdir}/perl5/site_perl/*/*/Net/NNTP.pm
+%{_libdir}/perl5/site_perl/*/*/Net/Netrc.pm
+%{_libdir}/perl5/site_perl/*/*/Net/PH.pm
+%{_libdir}/perl5/site_perl/*/*/Net/POP3.pm
+%{_libdir}/perl5/site_perl/*/*/Net/SMTP.pm
+%{_libdir}/perl5/site_perl/*/*/Net/SNPP.pm
+%{_libdir}/perl5/site_perl/*/*/Net/Time.pm
+%{_libdir}/perl5/site_perl/*/*/auto/Net
 %{_mandir}/man3/*
 
 %changelog 
