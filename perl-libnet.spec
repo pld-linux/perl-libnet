@@ -2,7 +2,7 @@ Summary:	Miscellaneous perl networking modules
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		perl-libnet
 Version:	1.0606
-Release:	3
+Release:	4
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Copyright:	GPL
@@ -77,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{perl_sitearch}/Net
 %config(noreplace) %{perl_sitearch}/Net/Config.pm
 
 %{perl_sitearch}/Net/Cmd.pm
@@ -92,5 +91,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/Net/SMTP.pm
 %{perl_sitearch}/Net/SNPP.pm
 %{perl_sitearch}/Net/Time.pm
-%{perl_sitearch}/auto/Net
+%{perl_sitearch}/auto/Net/.packlist
 %{_mandir}/man3/*
