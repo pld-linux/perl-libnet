@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	libnet
@@ -20,7 +24,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libnet
 Summary(zh_CN):	libnet Perl Ä£¿é
 Name:		perl-libnet
 Version:	1.12
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -28,13 +32,13 @@ Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	perl >= 5.6
-BuildRequires:	perl-MIME-Base64
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-# required only on os390
-%define		_noautoreq	'perl(Convert::EBCDIC)'
+# Convert::EBCDIC required only on os390
+# Authen::SASL and MIME::Base64 required only for SMTP AUTH
+%define		_noautoreq	'perl(Convert::EBCDIC)' 'perl(Authen::SASL)' 'perl(MIME::Base64)'
 
 %description
 libnet is a collection of Perl modules which provides a simple and
@@ -72,6 +76,8 @@ które s± zaimplementowane w libnet:
 perl Makefile.PL </dev/null
 
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
