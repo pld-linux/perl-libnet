@@ -23,8 +23,8 @@ Summary(sv):	libnet Perlmodul
 Summary(uk):	Модуль для Perl libnet
 Summary(zh_CN):	libnet Perl дё©И
 Name:		perl-libnet
-Version:	1.12
-Release:	3
+Version:	1.13
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
