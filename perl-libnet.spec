@@ -3,7 +3,7 @@ Summary:	Miscellaneous perl networking modules
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
 Name:		perl-libnet
 Version:	1.0606
-Release:	4
+Release:	5
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Copyright:	GPL
