@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	NET
+%define		pdir	Net
 %define		pnam	libnet
 Summary:	Miscellaneous perl networking modules
 Summary(cs):	Modul libnet pro Perl
@@ -19,8 +19,9 @@ Summary(sv):	libnet Perlmodul
 Summary(uk):	Модуль для Perl libnet
 Summary(zh_CN):	libnet Perl дё©И
 Name:		perl-libnet
-Version:	1.0901
-Release:	4
+Version:	1.12
+Release:	1
+Epoch:		1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
