@@ -1,14 +1,31 @@
 %include	/usr/lib/rpm/macros.perl
+%define		pdir	NET
+%define		pnam	libnet
 Summary:	Miscellaneous perl networking modules
+Summary(cs):	Modul libnet pro Perl
+Summary(da):	Perl-modulet libnet
+Summary(de):	libnet Perl Modul
+Summary(es):	Módulo de Perl libnet
+Summary(fr):	Module Perl libnet
+Summary(it):	Modulo di Perl libnet
+Summary(ja):	libnet Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	libnet ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul libnet
 Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
+Summary(pt):	Módulo de Perl libnet
+Summary(pt_BR):	Módulo Perl libnet
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl libnet
+Summary(sv):	libnet Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libnet
+Summary(zh_CN):	libnet Perl Ä£¿é
 Name:		perl-libnet
 Version:	1.0901
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
-URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
+URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
@@ -31,14 +48,10 @@ distribution are:
 - Net::POP3 - RFC1939 Post Office Protocol 3
 - Net::SNPP - RFC1861 Simple Network Pager Protocol
 
-The distribution also contains a module (Net::PH) which facilitates
-comunicate with with servers using the CCSO Nameserver Server-Client
-Protocol
-
 %description -l pl
 libnet jest zestawem modu³ów do perla, które udostêpniaj± prosty i
 spójny interfejs programisty (API) do obs³ugi po stronie klienta
-ró¿nych protoko³ów u¿uwanych w sieci Internet. Spis dokumentów RFS,
+ró¿nych protoko³ów u¿ywanych w sieci Internet. Spis dokumentów RFC,
 które s± zaimplementowane w libnet:
 
 - Net::FTP - RFC959 File Transfer Protocol
@@ -49,15 +62,12 @@ które s± zaimplementowane w libnet:
 - Net::POP3 - RFC1939 Post Office Protocol 3
 - Net::SNPP - RFC1861 Simple Network Pager Protocol
 
-Dystrybucja libnet zawiera tak¿e modu³ (Net::PH), który umo¿liwia
-komunikacjê z serwerami CCSO Nameserver Server-Client Protocol.
-
 %prep
-%setup -q -n libnet-%{version}
+%setup -q -n %{pnam}-%{version}
 %patch -p1
 
 %build
-yes "" | perl Makefile.PL 
+perl Makefile.PL </dev/null
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
@@ -72,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README ChangeLog
 %config(noreplace) %{perl_sitelib}/Net/Config.pm
 %{perl_sitelib}/Net/Cmd.pm
 %{perl_sitelib}/Net/Domain.pm
