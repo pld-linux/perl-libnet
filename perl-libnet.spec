@@ -6,14 +6,6 @@ Version:	1.0901
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Group(cs):	Vıvojové prostøedky/Programovací jazyky/Perl
-Group(de):	Entwicklung/Sprachen/Perl
-Group(es):	Desarrollo/Lenguajes/Perl
-Group(fr):	Development/Langues/Perl
-Group(ja):	³«È¯/¸À¸ì/Perl
-Group(pl):	Programowanie/Jêzyki/Perl
-Group(pt):	Desenvolvimento/Linguagens/Perl
-Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/libnet-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/Net/libnet-%{version}.readme
