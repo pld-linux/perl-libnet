@@ -23,14 +23,14 @@ Summary(sv):	libnet Perlmodul
 Summary(uk):	Модуль для Perl libnet
 Summary(zh_CN):	libnet Perl дё©И
 Name:		perl-libnet
-Version:	1.19
+Version:	1.20
 Release:	3
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	e6533ef83a2497562418a2239bb44602
+# Source0-md5:	5d884dccf00c787ec560c83abda67c64
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
 BuildRequires:	perl-devel >= 1:5.8.0
