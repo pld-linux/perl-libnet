@@ -6,22 +6,22 @@
 %define		pdir	Net
 %define		pnam	libnet
 Summary:	Miscellaneous perl networking modules
-Summary(cs):	Modul libnet pro Perl
-Summary(da):	Perl-modulet libnet
-Summary(de):	libnet Perl Modul
-Summary(es):	Módulo de Perl libnet
-Summary(fr):	Module Perl libnet
-Summary(it):	Modulo di Perl libnet
-Summary(ja):	libnet Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	libnet ÆŞ ¸ğÁÙ
-Summary(nb):	Perlmodul libnet
-Summary(pl):	Ró¿ne modu³y perlowe do obs³ugi sieci
-Summary(pt):	Módulo de Perl libnet
-Summary(pt_BR):	Módulo Perl libnet
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl libnet
-Summary(sv):	libnet Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libnet
-Summary(zh_CN):	libnet Perl Ä£¿é
+Summary(cs.UTF-8):   Modul libnet pro Perl
+Summary(da.UTF-8):   Perl-modulet libnet
+Summary(de.UTF-8):   libnet Perl Modul
+Summary(es.UTF-8):   MÃ³dulo de Perl libnet
+Summary(fr.UTF-8):   Module Perl libnet
+Summary(it.UTF-8):   Modulo di Perl libnet
+Summary(ja.UTF-8):   libnet Perl ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+Summary(ko.UTF-8):   libnet í„ ëª¨ì¤„
+Summary(nb.UTF-8):   Perlmodul libnet
+Summary(pl.UTF-8):   RÃ³Å¼ne moduÅ‚y perlowe do obsÅ‚ugi sieci
+Summary(pt.UTF-8):   MÃ³dulo de Perl libnet
+Summary(pt_BR.UTF-8):   MÃ³dulo Perl libnet
+Summary(ru.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl libnet
+Summary(sv.UTF-8):   libnet Perlmodul
+Summary(uk.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl libnet
+Summary(zh_CN.UTF-8):   libnet Perl æ¨¡å—
 Name:		perl-libnet
 Version:	1.20
 Release:	3
@@ -56,11 +56,11 @@ distribution are:
 - Net::POP3 - RFC1939 Post Office Protocol 3
 - Net::SNPP - RFC1861 Simple Network Pager Protocol
 
-%description -l pl
-libnet jest zestawem modu³ów do Perla, które udostêpniaj± prosty i
-spójny interfejs programisty (API) do obs³ugi po stronie klienta
-ró¿nych protoko³ów u¿ywanych w sieci Internet. Spis dokumentów RFC,
-które s± zaimplementowane w libnet:
+%description -l pl.UTF-8
+libnet jest zestawem moduÅ‚Ã³w do Perla, ktÃ³re udostÄ™pniajÄ… prosty i
+spÃ³jny interfejs programisty (API) do obsÅ‚ugi po stronie klienta
+rÃ³Å¼nych protokoÅ‚Ã³w uÅ¼ywanych w sieci Internet. Spis dokumentÃ³w RFC,
+ktÃ³re sÄ… zaimplementowane w libnet:
 
 - Net::FTP - RFC959 File Transfer Protocol
 - Net::SMTP - RFC821 Simple Mail Transfer Protocol
