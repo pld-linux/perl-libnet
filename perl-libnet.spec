@@ -6,22 +6,22 @@
 %define		pdir	Net
 %define		pnam	libnet
 Summary:	Miscellaneous perl networking modules
-Summary(cs.UTF-8):   Modul libnet pro Perl
-Summary(da.UTF-8):   Perl-modulet libnet
-Summary(de.UTF-8):   libnet Perl Modul
-Summary(es.UTF-8):   Módulo de Perl libnet
-Summary(fr.UTF-8):   Module Perl libnet
-Summary(it.UTF-8):   Modulo di Perl libnet
-Summary(ja.UTF-8):   libnet Perl モジュール
-Summary(ko.UTF-8):   libnet 펄 모줄
-Summary(nb.UTF-8):   Perlmodul libnet
-Summary(pl.UTF-8):   Różne moduły perlowe do obsługi sieci
-Summary(pt.UTF-8):   Módulo de Perl libnet
-Summary(pt_BR.UTF-8):   Módulo Perl libnet
-Summary(ru.UTF-8):   Модуль для Perl libnet
-Summary(sv.UTF-8):   libnet Perlmodul
-Summary(uk.UTF-8):   Модуль для Perl libnet
-Summary(zh_CN.UTF-8):   libnet Perl 模块
+Summary(cs.UTF-8):	Modul libnet pro Perl
+Summary(da.UTF-8):	Perl-modulet libnet
+Summary(de.UTF-8):	libnet Perl Modul
+Summary(es.UTF-8):	Módulo de Perl libnet
+Summary(fr.UTF-8):	Module Perl libnet
+Summary(it.UTF-8):	Modulo di Perl libnet
+Summary(ja.UTF-8):	libnet Perl モジュール
+Summary(ko.UTF-8):	libnet 펄 모줄
+Summary(nb.UTF-8):	Perlmodul libnet
+Summary(pl.UTF-8):	Różne moduły perlowe do obsługi sieci
+Summary(pt.UTF-8):	Módulo de Perl libnet
+Summary(pt_BR.UTF-8):	Módulo Perl libnet
+Summary(ru.UTF-8):	Модуль для Perl libnet
+Summary(sv.UTF-8):	libnet Perlmodul
+Summary(uk.UTF-8):	Модуль для Perl libnet
+Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
 Version:	1.20
 Release:	3
