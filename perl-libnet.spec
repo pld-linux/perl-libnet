@@ -29,7 +29,7 @@ Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
 # Source0-md5:	ac82f4ea57113dabcce4b65d540a7a3a
 Patch0:		%{name}-Configure.patch
 URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
