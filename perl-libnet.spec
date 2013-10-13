@@ -87,6 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Net/libnetFAQ.pod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -109,4 +111,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Net/Netrc.pm
 %{perl_vendorlib}/Net/SMTP.pm
 %{perl_vendorlib}/Net/Time.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Net::*.3pm*
