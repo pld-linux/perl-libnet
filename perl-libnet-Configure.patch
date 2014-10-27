@@ -1,27 +1,26 @@
-diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
---- libnet-1.0703.orig/Configure	Mon Jan 17 17:44:18 2000
-+++ libnet-1.0703/Configure	Wed Aug  2 20:51:54 2000
-@@ -312,8 +312,7 @@
+--- libnet-3.02/Configure.orig	2014-10-11 00:59:32.000000000 +0200
++++ libnet-3.02/Configure	2014-10-27 17:50:29.824984858 +0100
+@@ -322,8 +322,7 @@
  
  $msg = 'Enter a list of available NNTP hosts :';
  
 -$def = $oldcfg{'nntp_hosts'} ||
--	[ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
+-        [ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
 +$def = [];
  
  $cfg{'nntp_hosts'} = get_host_list($msg,$def);
  
-@@ -321,8 +320,7 @@
+@@ -331,8 +330,7 @@
  
  $msg = 'Enter a list of available SMTP hosts :';
  
 -$def = $oldcfg{'smtp_hosts'} ||
--	[ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
+-        [ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
 +$def = [];
  
  $cfg{'smtp_hosts'} = get_host_list($msg,$def);
  
-@@ -330,7 +328,7 @@
+@@ -340,7 +338,7 @@
  
  $msg = 'Enter a list of available POP3 hosts :';
  
@@ -30,7 +29,7 @@ diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
  
  $cfg{'pop3_hosts'} = get_host_list($msg,$def);
  
-@@ -338,7 +336,7 @@
+@@ -348,7 +346,7 @@
  
  $msg = 'Enter a list of available SNPP hosts :';
  
@@ -39,17 +38,17 @@ diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
  
  $cfg{'snpp_hosts'} = get_host_list($msg,$def);
  
-@@ -346,8 +344,7 @@
+@@ -356,8 +354,7 @@
  
  $msg = 'Enter a list of available PH Hosts   :'  ;
  
 -$def = $oldcfg{'ph_hosts'} ||
--	[ default_hostname('dirserv') ];
+-        [ default_hostname('dirserv') ];
 +$def = [];
  
  $cfg{'ph_hosts'}   =  get_host_list($msg,$def);
  
-@@ -355,7 +352,7 @@
+@@ -365,7 +362,7 @@
  
  $msg = 'Enter a list of available TIME Hosts   :'  ;
  
@@ -58,7 +57,7 @@ diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
  
  $cfg{'time_hosts'} = get_host_list($msg,$def);
  
-@@ -363,7 +360,7 @@
+@@ -373,7 +370,7 @@
  
  $msg = 'Enter a list of available DAYTIME Hosts   :'  ;
  
@@ -67,7 +66,7 @@ diff -ur libnet-1.0703.orig/Configure libnet-1.0703/Configure
  
  $cfg{'daytime_hosts'} = get_host_list($msg,$def);
  
-@@ -427,7 +424,7 @@
+@@ -437,7 +434,7 @@
   $def = exists $oldcfg{'ftp_firewall_type'}  ? $oldcfg{'ftp_firewall_type'} : 1;
   $ans = Prompt($msg,$def);
   $cfg{'ftp_firewall_type'} = 0+$ans;

@@ -23,18 +23,22 @@ Summary(sv.UTF-8):	libnet Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
-Version:	1.24
+Version:	3.02
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
-# Source0-md5:	cb8b798bd26426de1d9b48a654c8f104
+# Source0-md5:	67da777d3efaa44b1932a43c37c450b0
 Patch0:		%{name}-Configure.patch
-URL:		http://www.perl.com/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.readme
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/libnet/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
+%{?with_tests:BuildRequires:	perl-Test-Pod-Coverage >= 0.08}
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+#Suggests:	perl-IO-Socket-IP >= 0.20 or perl-IO-Socket-INET6 >= 2.62
+Suggests:	perl-IO-Socket-SSL >= 1.999
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
