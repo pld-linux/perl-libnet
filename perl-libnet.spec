@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	libnet
-Summary:	Miscellaneous perl networking modules
+Summary:	Miscellaneous Perl networking modules
 Summary(cs.UTF-8):	Modul libnet pro Perl
 Summary(da.UTF-8):	Perl-modulet libnet
 Summary(de.UTF-8):	libnet Perl Modul
@@ -34,11 +34,17 @@ Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-Configure.patch
 URL:		http://search.cpan.org/dist/libnet/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
-%{?with_tests:BuildRequires:	perl-Test-Pod-Coverage >= 0.08}
+%if %{with tests}
+BuildRequires:	perl-Test-Pod >= 1.00
+BuildRequires:	perl-Test-Pod-Coverage >= 0.08
+%endif
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl(IO::Socket) >= 1.05
+# Makefile.PL says so because of some Net::FTP issue (CPAN RT#100020)
+#Requires:	perl-Socket >= 2.016
 #Suggests:	perl-IO-Socket-IP >= 0.20 or perl-IO-Socket-INET6 >= 2.62
-Suggests:	perl-IO-Socket-SSL >= 1.999
+Suggests:	perl-IO-Socket-SSL >= 2.007
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
