@@ -23,14 +23,14 @@ Summary(sv.UTF-8):	libnet Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
-Version:	3.10
+Version:	3.11
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
-# Source0-md5:	9c298eb72753cd58cee6ed777484e44a
+# Source0-md5:	f4fdfa0906bf2ad5ac3c74c3860eb029
 Patch0:		%{name}-Configure.patch
 URL:		http://search.cpan.org/dist/libnet/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
