@@ -22,16 +22,16 @@ Summary(sv.UTF-8):	libnet Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
-Version:	3.11
+Version:	3.13
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
-# Source0-md5:	f4fdfa0906bf2ad5ac3c74c3860eb029
+# Source0-md5:	3fa5c6989db687b2381cd42fe55f5134
 Patch0:		%{name}-Configure.patch
-URL:		http://search.cpan.org/dist/libnet/
+URL:		https://metacpan.org/release/libnet
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
 %if %{with tests}
 BuildRequires:	perl-Test-Pod >= 1.00
@@ -39,6 +39,7 @@ BuildRequires:	perl-Test-Pod-Coverage >= 0.08
 %endif
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl(IO::Socket) >= 1.05
 # Makefile.PL says so because of some Net::FTP issue (CPAN RT#100020)
 #Requires:	perl-Socket >= 2.016
@@ -49,7 +50,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # Convert::EBCDIC required only on os390
 # Authen::SASL and MIME::Base64 required only for SMTP AUTH
-%define		_noautoreq	'perl(Convert::EBCDIC)' 'perl(Authen::SASL)' 'perl(MIME::Base64)'
+%define		_noautoreq_perl	Convert::EBCDIC Authen::SASL MIME::Base64
 
 %description
 libnet is a collection of Perl modules which provides a simple and
@@ -120,4 +121,13 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Net/Netrc.pm
 %{perl_vendorlib}/Net/SMTP.pm
 %{perl_vendorlib}/Net/Time.pm
-%{_mandir}/man3/Net::*.3pm*
+%{_mandir}/man3/Net::Cmd.3pm*
+%{_mandir}/man3/Net::Config.3pm*
+%{_mandir}/man3/Net::Domain.3pm*
+%{_mandir}/man3/Net::FTP*.3pm*
+%{_mandir}/man3/Net::NNTP.3pm*
+%{_mandir}/man3/Net::POP3.3pm*
+%{_mandir}/man3/Net::Netrc.3pm*
+%{_mandir}/man3/Net::SMTP.3pm*
+%{_mandir}/man3/Net::Time.3pm*
+%{_mandir}/man3/Net::libnetFAQ.3pm*
