@@ -82,7 +82,7 @@ które są zaimplementowane w libnet:
 
 %prep
 %setup -q -n %{pnam}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL </dev/null \
