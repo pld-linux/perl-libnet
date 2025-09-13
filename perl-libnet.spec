@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Net
 %define		pnam	libnet
@@ -22,16 +22,16 @@ Summary(sv.UTF-8):	libnet Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
-Version:	3.14
+Version:	3.15
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
-# Source0-md5:	4bc9d0d71f3b35c867902956773033b9
+Source0:	https://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
+# Source0-md5:	52e63b849081b750da6e0f5a67de75c3
 Patch0:		%{name}-Configure.patch
-URL:		https://metacpan.org/release/libnet
+URL:		https://metacpan.org/dist/libnet
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
 %if %{with tests}
 BuildRequires:	perl-Test-Pod >= 1.00
@@ -43,7 +43,7 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl(IO::Socket) >= 1.05
 # Makefile.PL says so because of some Net::FTP issue (CPAN RT#100020)
 #Requires:	perl-Socket >= 2.016
-#Suggests:	perl-IO-Socket-IP >= 0.20 or perl-IO-Socket-INET6 >= 2.62
+#Suggests:	perl-IO-Socket-IP >= 0.25 or perl-IO-Socket-INET6 >= 2.62
 Suggests:	perl-IO-Socket-SSL >= 2.007
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
