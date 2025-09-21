@@ -22,8 +22,9 @@ Summary(sv.UTF-8):	libnet Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
+# 3.15 included in perl 5.42
 Version:	3.15
-Release:	1
+Release:	0.1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
