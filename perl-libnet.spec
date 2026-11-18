@@ -23,14 +23,14 @@ Summary(uk.UTF-8):	Модуль для Perl libnet
 Summary(zh_CN.UTF-8):	libnet Perl 模块
 Name:		perl-libnet
 # 3.15 included in perl 5.42
-Version:	3.15
-Release:	0.1
+Version:	3.16
+Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/Net/%{pnam}-%{version}.tar.gz
-# Source0-md5:	52e63b849081b750da6e0f5a67de75c3
+Source0:	https://www.cpan.org/authors/id/S/SH/SHAY/%{pnam}-%{version}.tar.gz
+# Source0-md5:	fd18958ed609d7c72f0f1318d549017b
 Patch0:		%{name}-Configure.patch
 URL:		https://metacpan.org/dist/libnet
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
